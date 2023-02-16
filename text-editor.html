@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/ac9b9d1d67.js" crossorigin="anonymous"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="bg-sky-300 w-9/12 mx-auto mt-12 pb-8 rounded drop-shadow-2xl">
+        <h1 class="text-3xl font-medium text-center pt-6">
+            My Text Editor
+        </h1>
+        <section class="bg-sky-200 w-8/12 mx-auto mt-6 border-2 border-black rounded-sm drop-shadow-2xl">
+            <div id="editor-control-buttons" class="flex gap-4 flex-wrap lg:flex-nowrap px-8 pt-4">
+                <div id="decoration-buttons" class="flex gap-2 flex-1">
+                    <button id="btn-bold" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-bold"></i>
+                    </button>
+                    <button id="btn-italic" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-italic"></i>
+                    </button>
+                    <button id="btn-underline" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-underline"></i>
+                    </button>
+                </div>
+                <div id="align-buttons" class="flex gap-2 flex-1">
+                    <button id="btn-align-left" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-align-left"></i>
+                    </button>
+                    <button id="btn-align-right" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-align-right"></i>
+                    </button>
+                    <button id="btn-align-center" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-align-center"></i>
+                    </button>
+                    <button id="btn-align-justify" class="px-3 py-1 focus:bg-orange-400 rounded-sm">
+                        <i class="fa-solid fa-align-justify"></i>
+                    </button>
+                </div>
+                <div id="text-controls" class="flex justify-between items-center gap-2 flex-1">
+                    <input type="number" id="font-size-field" value="17" min="11" max="66" class="rounded w-11 focus:bg-green-400">
+                    <h6 id="text-case" class="font-medium text-center hover:cursor-pointer">aA</h6>
+                    <input type="color" id="input-color">
+                </div>
+            </div>
+            <hr class="border border-black mx-8 my-5">
+            <div class="px-8 pt-2 pb-4">
+                <textarea id="text-editor" class="w-full h-80 rounded px-4 py-2"></textarea>
+            </div>
+        </section>
+    </main>
+    <script src="js/utilities.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+
+</html>
